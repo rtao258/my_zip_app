@@ -35,6 +35,11 @@
 </header>
 
 <div class="container" role="main">
+  <% if @error %>
+    <div class="alert alert-danger" role="alert">
+      Error: <%= @error %>
+    </div>
+  <% end %>
   <%== yield %>
 </div>
 
